@@ -1,0 +1,109 @@
+body {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 200px;
+  }
+  .texto-principal{
+    display: flex;
+  }
+
+  .spinner {
+    padding: 20px;
+    height: 50px;
+    width: max-content;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: monospace;
+    letter-spacing: 1em;
+    color: #f5f5f5;
+    filter: drop-shadow(0 0 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   
+   .spinner span {
+    animation: loading6454 1.75s ease infinite;
+   }
+   
+   .spinner span:nth-child(2) {
+    animation-delay: 0.25s;
+   }
+   
+   .spinner span:nth-child(3) {
+    animation-delay: 0.5s;
+   }
+   
+   .spinner span:nth-child(4) {
+    animation-delay: 0.75s;
+   }
+   
+   .spinner span:nth-child(5) {
+    animation-delay: 1s;
+   }
+   
+   .spinner span:nth-child(6) {
+    animation-delay: 1.25s;
+   }
+   
+   .spinner span:nth-child(7) {
+    animation-delay: 1.5s;
+   }
+   
+   @keyframes loading6454 {
+    0%, 100% {
+     transform: translateY(0);
+    }
+   
+    50% {
+     transform: translateY(-10px);
+    }
+   }
+  
+  button {
+    --green: #fd1b1b;
+    font-size: 15px;
+    padding: 0.7em 2.7em;
+    letter-spacing: 0.06em;
+    position: relative;
+    font-family: inherit;
+    border-radius: 0.6em;
+    overflow: hidden;
+    transition: all 0.3s;
+    line-height: 1.4em;
+    border: 2px solid var(--green);
+    background: linear-gradient(to right, rgba(253, 27, 27, 0.1) 1%, transparent 40%,transparent 60% , rgba(253, 27, 27, 0.1) 100%);
+    color: var(--green);
+    box-shadow: inset 0 0 10px rgba(253, 27, 27, 0.4), 0 0 9px 3px rrgba(253, 27, 27, 0.1);
+    position: absolute;
+  }
+  button:hover {
+    color: #ff8282;
+    box-shadow: inset 0 0 10px rgba(253, 27, 27, 0.6), 0 0 9px 3px rgba(253, 27, 27, 0.2);
+   }
+   button:before {
+    content: "";
+    position: absolute;
+    left: -4em;
+    width: 4em;
+    height: 100%;
+    top: 0;
+    transition: transform .4s ease-in-out;
+    background: linear-gradient(to right, transparent 1%, rgba(253, 27, 27, 0.1) 40%,rgba(253, 27, 27, 0.1) 60% , transparent 100%);
+   }
+   
+   button:hover:before {
+    transform: translateX(15em);
+   }
+  
+  .hidden {
+    display:none;
+  }
+  
+  #move {
+    left: 200px;
+  }
+  
+  #change:hover {
+    cursor:pointer;
+  }
